@@ -25,6 +25,10 @@ cp agents/ticket.md ~/.claude/agents/ticket.md
 # 3. (Optional) Drop the discuss skill for tickets that aren't fully scoped
 mkdir -p ~/.claude/skills/discuss
 cp skills/discuss/SKILL.md ~/.claude/skills/discuss/SKILL.md
+
+# 4. (Optional) Drop the cc-to-linear skill to post agent run timelines to Linear
+mkdir -p ~/.claude/skills/cc-to-linear
+cp -R skills/cc-to-linear/* ~/.claude/skills/cc-to-linear/
 ```
 
 Then in any Claude Code session inside a git repo:
@@ -37,6 +41,12 @@ For tickets that aren't fully scoped, talk through the implementation decisions 
 
 ```
 /discuss ABC-123 - short description of what needs deciding
+```
+
+To post the agent's tool-by-tool timeline as a comment on a Linear issue once the run finishes:
+
+```
+/cc-to-linear LIN-123
 ```
 
 ## Prerequisites
@@ -52,6 +62,7 @@ For tickets that aren't fully scoped, talk through the implementation decisions 
 - [`AGENTS.md`](./AGENTS.md) - Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. This is the source of truth for how the agent works.
 - [`agents/ticket.md`](./agents/ticket.md) - The agent definition. Four-phase workflow: gather context, set up worktree and plan, execute with TDD, push and open MR.
 - [`skills/discuss/SKILL.md`](./skills/discuss/SKILL.md) - Optional companion skill. Run `/discuss` before `/ticket` to clarify gray-area implementation decisions and write them to a context file the ticket agent can consume.
+- [`skills/cc-to-linear/`](./skills/cc-to-linear/) - Optional companion skill. After the agent finishes a ticket, run `/cc-to-linear LIN-123` to post a structured timeline of the run (prompt, tools used, files touched, errors handled, final message) as a comment on the Linear issue. Gives reviewers an auditable trail alongside the diff. Requires the [Linear MCP server](https://linear.app/docs/mcp).
 
 ## How it works
 
