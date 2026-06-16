@@ -11,6 +11,7 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 - Run commands yourself when stuck or investigating. Do not defer to the user for simple bash commands like `curl` requests or exploring codebases.
 - Take initiative to unblock yourself by running diagnostic commands, fetching credentials, or testing APIs.
 - Only ask for permission when the action has destructive or irreversible consequences.
+- Don't recommend an action and then ask permission to take it. If you've just told the user "drop this paragraph", "fix these six things", "swap X for Y", do it in the same turn. Trailing phrases like "Want me to fix it?", "Want me to delete it?", "Should I apply both?" after a clear recommendation are redundant — default to acting.
 
 ## Git Guidelines
 - Never run commit changes on your own, UNLESS I EXPLICITLY ALLOW YOU VIA THE PLAN. I will commit changes manually otherwise.
@@ -30,11 +31,11 @@ When entering plan mode for implementation tasks:
 
 4. Format each commit group in the plan with a status indicator (`⬜` pending, `✅` completed) and end each group with a separator and a stop message. Each commit group must include these subsections:
 
-    - **Brief requirement** - the requirement this commit addresses, with an explanation of how it maps to the work
-    - **How the implementation satisfies it** - the technical approach and design decisions
-    - **Red phase** - the failing tests to write first (TDD), with expected inputs and outputs
-    - **Green phase** - the implementation steps to make the tests pass
-    - **Verification** - the command to run to confirm everything passes
+    - **Brief requirement** — the requirement this commit addresses, with an explanation of how it maps to the work
+    - **How the implementation satisfies it** — the technical approach and design decisions
+    - **Red phase** — the failing tests to write first (TDD), with expected inputs and outputs
+    - **Green phase** — the implementation steps to make the tests pass
+    - **Verification** — the command to run to confirm everything passes
 
     Example:
 
@@ -145,6 +146,9 @@ When entering plan mode for implementation tasks:
 - NEVER use `getByText`, `queryByText`, or any text-based selector to find elements in tests. Use `getByTestId`, `getByRole`, or other non-text-based queries instead.
 - NEVER assert on exact string content in tests. Tests should verify structure, behaviour, and state, not copy. If text changes, tests should not break.
 - NEVER write tests that assert on CSS classes, inline styles, or visual styling (e.g. `toHaveClass('font-medium')`, `toHaveStyle`). Tests should verify behaviour, not presentation. Styling is validated visually or through snapshot/visual regression tests, not unit tests.
+- NEVER name a test after its assertion mechanism, mock setup, or the SDK methods it pokes at. The name describes the user-visible contract — what the code promises to do — not how the test verifies it. A reader who has never seen the implementation should read the `it(...)` string and know what behaviour breaks if the test fails. Bad: `"returns truthy when called with X"`, `"round-trips without throwing"`, `"makes exactly one createTree call"`, `"uses vi.mock"`. Good: `"writes N files as a single commit"`, `"translates the post body into the requested language"`, `"preserves existing repo contents when adding files"`. If the name leaks library names, method names, mock terminology, or types, rename it.
+- NEVER duplicate the same literal in a test fixture and its expectation. Any value that appears in both the input/fixture and an `expect` must be hoisted into a constant referenced by both sides. Hard-coding `title: "Foo"` in the YAML AND `expect(data.title).toBe("Foo")` makes the test tautological — it verifies that two literals are equal, not that the value flowed through the code under test. Bad: input `` `title: My first post\n...` `` paired with `expect(data.title).toBe("My first post")`. Good: `const TITLE = "My first post"` then `` `title: ${TITLE}\n...` `` paired with `expect(data.title).toBe(TITLE)`.
+- NEVER write a test that only verifies an external library's behaviour. Tests must verify YOUR code: the logic you wrote, the configuration you chose, the integration glue you assembled. If the test would still pass when your wrapper is replaced with a direct call into the underlying library, it's testing the library, not you. Test the thin layer that's yours, not the thick library underneath.
 
 ## Systematic Debugging Process
 
