@@ -1,0 +1,3 @@
+[submodule "skills/side-compact"]
+	path = skills/side-compact
+	url = https://github.com/akash-joshi/side-compact
