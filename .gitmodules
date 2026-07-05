@@ -1,3 +1,6 @@
 [submodule "skills/side-compact"]
 	path = skills/side-compact
 	url = https://github.com/akash-joshi/side-compact
+[submodule "skills/voicenotes-skill"]
+	path = skills/voicenotes-skill
+	url = https://github.com/akash-joshi/voicenotes-skill
