@@ -1,6 +1,6 @@
 # agent-skills
 
-A collection of AI agent skills, custom agents, and workflows for Claude Code. Built for engineers, consultants, and founders who want AI agents that actually do useful work.
+Personalised agent skills for engineers, consultants, and founders. Client acquisition, cold outreach, TDD ticket automation, and more. Works with Claude Code, Cursor, Codex CLI, and Gemini CLI.
 
 By [Akash Joshi](https://thewriting.dev).
 
