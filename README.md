@@ -1,6 +1,6 @@
 # agent-skills
 
-Personalised agent skills for engineers, consultants, and founders. Client acquisition, cold outreach, TDD ticket automation, and more. Works with Claude Code, Cursor, Codex CLI, and Gemini CLI.
+A collection of AI agent skills, custom agents, and workflows for Claude Code. Built for engineers, consultants, and founders who want AI agents that actually do useful work.
 
 By [Akash Joshi](https://thewriting.dev).
 
@@ -20,7 +20,7 @@ By [Akash Joshi](https://thewriting.dev).
 | [prospecting-lists](cold-outreach-skills/skills/prospecting-lists/) | ICP-based systematic list building |
 | [discovery-calls](cold-outreach-skills/skills/discovery-calls/) | Run calls that close deals |
 
-### 🎫 Ticket Agent
+### 🎫 [Ticket Agent](agents/ticket.md)
 
 A custom Claude Code agent that turns a ticket ID into a reviewable merge request, one TDD commit at a time.
 
@@ -32,29 +32,31 @@ The agent reads the ticket from your project tracker, follows linked designs and
 
 Full writeup: [Hand Claude a Ticket, Get Back a Merge Request](https://thewriting.dev)
 
-**Files:**
-- [`AGENTS.md`](./AGENTS.md) - Engineering rules the agent follows
-- [`agents/ticket.md`](./agents/ticket.md) - The agent definition (4-phase workflow)
-- [`skills/discuss/SKILL.md`](./skills/discuss/SKILL.md) - Clarify ambiguous tickets before executing
-- [`skills/cc-to-linear/`](./skills/cc-to-linear/) - Post agent run timelines to Linear issues
+**Prerequisites:** Project tracker MCP server (Jira, Linear, GitHub Issues, etc.), `glab` or `gh` CLI for merge requests, Figma MCP server (optional).
 
-**Install:**
+### 💬 [Discuss](skills/discuss/)
 
-```sh
-# Agent + engineering rules
-cp AGENTS.md ~/AGENTS.md
-mkdir -p ~/.claude/agents && cp agents/ticket.md ~/.claude/agents/ticket.md
+Clarify gray areas in proposed work before planning. Surfaces implementation choices that would change the outcome, walks through them with concrete options, and produces a context file that plan mode or downstream agents can consume.
 
-# Optional skills
-mkdir -p ~/.claude/skills/discuss && cp skills/discuss/SKILL.md ~/.claude/skills/discuss/SKILL.md
-mkdir -p ~/.claude/skills/cc-to-linear && cp -R skills/cc-to-linear/* ~/.claude/skills/cc-to-linear/
+```
+/discuss ABC-123 - should we use WebSockets or SSE for the streaming endpoint?
 ```
 
-**Prerequisites:**
-- [Claude Code](https://www.anthropic.com/claude-code)
-- Project tracker MCP server (Jira, Linear, GitHub Issues, etc.)
-- Figma MCP server (optional, for design files)
-- `glab` or `gh` CLI for merge requests
+Use before `/ticket` on any non-trivial feature where multiple reasonable implementations exist. Lightweight — no scaffolding required.
+
+### 📋 [CC-to-Linear](skills/cc-to-linear/)
+
+Post a Claude Code session's agent activity timeline as a comment on a Linear issue. Gives reviewers an auditable trail of what the agent did — tools called, files touched, models used, final message — alongside the human-written discussion on the ticket.
+
+```
+/cc-to-linear LIN-123
+```
+
+**Prerequisites:** [Linear MCP server](https://linear.app/docs/mcp).
+
+### 📐 [AGENTS.md](./AGENTS.md)
+
+Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. Drop this at the root of your repo (or `~/AGENTS.md` for global rules) — it's the source of truth for how all agents in this repo behave.
 
 ## Install
 
@@ -82,9 +84,13 @@ git clone https://github.com/akash-joshi/agent-skills.git
 # Just cold outreach skills
 cp -r agent-skills/cold-outreach-skills/skills/* .agents/skills/
 
-# Just the ticket agent
+# Ticket agent + engineering rules
 cp agent-skills/AGENTS.md ~/AGENTS.md
-cp agent-skills/agents/ticket.md ~/.claude/agents/ticket.md
+mkdir -p ~/.claude/agents && cp agents/ticket.md ~/.claude/agents/ticket.md
+
+# Individual skills
+mkdir -p ~/.claude/skills/discuss && cp skills/discuss/SKILL.md ~/.claude/skills/discuss/SKILL.md
+mkdir -p ~/.claude/skills/cc-to-linear && cp -R skills/cc-to-linear/* ~/.claude/skills/cc-to-linear/
 ```
 
 ## License
