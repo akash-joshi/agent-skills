@@ -44,16 +44,6 @@ Clarify gray areas in proposed work before planning. Surfaces implementation cho
 
 Use before `/ticket` on any non-trivial feature where multiple reasonable implementations exist. Lightweight — no scaffolding required.
 
-### 📋 [CC-to-Linear](skills/cc-to-linear/)
-
-Post a Claude Code session's agent activity timeline as a comment on a Linear issue. Gives reviewers an auditable trail of what the agent did — tools called, files touched, models used, final message — alongside the human-written discussion on the ticket.
-
-```
-/cc-to-linear LIN-123
-```
-
-**Prerequisites:** [Linear MCP server](https://linear.app/docs/mcp).
-
 ### 📐 [AGENTS.md](./AGENTS.md)
 
 Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. Drop this at the root of your repo (or `~/AGENTS.md` for global rules) — it's the source of truth for how all agents in this repo behave.
@@ -90,7 +80,6 @@ mkdir -p ~/.claude/agents && cp agents/ticket.md ~/.claude/agents/ticket.md
 
 # Individual skills
 mkdir -p ~/.claude/skills/discuss && cp skills/discuss/SKILL.md ~/.claude/skills/discuss/SKILL.md
-mkdir -p ~/.claude/skills/cc-to-linear && cp -R skills/cc-to-linear/* ~/.claude/skills/cc-to-linear/
 ```
 
 ## License
