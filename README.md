@@ -22,15 +22,15 @@ By [Akash Joshi](https://thewriting.dev).
 
 ### 🎫 Ticket Agent
 
-A custom Claude Code agent that turns a Jira ticket ID into a reviewable merge request, one TDD commit at a time.
+A custom Claude Code agent that turns a ticket ID into a reviewable merge request, one TDD commit at a time.
 
 ```
 /ticket ABC-123
 ```
 
-The agent reads the Jira ticket, follows linked Figma designs and Confluence pages, explores the codebase, creates a worktree, writes a TDD-driven plan, executes it commit by commit, pushes the branch, and opens an MR. Your only job is to review the final diff.
+The agent reads the ticket from your project tracker, follows linked designs and docs, explores the codebase, creates a worktree, writes a TDD-driven plan, executes it commit by commit, pushes the branch, and opens an MR. Your only job is to review the final diff.
 
-Full writeup: [Hand Claude a Jira ID, Get Back a Merge Request](https://thewriting.dev)
+Full writeup: [Hand Claude a Ticket, Get Back a Merge Request](https://thewriting.dev)
 
 **Files:**
 - [`AGENTS.md`](./AGENTS.md) - Engineering rules the agent follows
@@ -52,8 +52,8 @@ mkdir -p ~/.claude/skills/cc-to-linear && cp -R skills/cc-to-linear/* ~/.claude/
 
 **Prerequisites:**
 - [Claude Code](https://www.anthropic.com/claude-code)
-- Atlassian MCP server (for Jira/Confluence)
-- Figma MCP server (for design files)
+- Project tracker MCP server (Jira, Linear, GitHub Issues, etc.)
+- Figma MCP server (optional, for design files)
 - `glab` or `gh` CLI for merge requests
 
 ## Install
