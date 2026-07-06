@@ -58,6 +58,23 @@ mkdir -p ~/.claude/skills/cc-to-linear && cp -R skills/cc-to-linear/* ~/.claude/
 
 ## Install
 
+### npx skills (Recommended)
+
+```sh
+# Install all skills
+npx skills add akash-joshi/agent-skills
+
+# Install just cold outreach skills
+npx skills add akash-joshi/agent-skills --skill cold-dm keyword-search follow-up-sequences
+
+# List available skills
+npx skills add akash-joshi/agent-skills --list
+```
+
+Works with Claude Code, Cursor, Codex CLI, and Gemini CLI. Auto-detects your agent and installs to the right directory.
+
+### Manual
+
 ```sh
 # Everything
 git clone https://github.com/akash-joshi/agent-skills.git
