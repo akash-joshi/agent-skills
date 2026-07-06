@@ -69,20 +69,35 @@ See each skill's **Related Skills** section for the full dependency map.
 
 ## Installation
 
-### Option 1: Clone and Copy
+### npx skills (Recommended)
+
+```bash
+# Install all cold outreach skills
+npx skills add akash-joshi/agent-skills --skill cold-dm keyword-search follow-up-sequences content-selling profile-optimization prospecting-lists discovery-calls
+
+# Install specific skills
+npx skills add akash-joshi/agent-skills --skill cold-dm keyword-search
+
+# List available skills
+npx skills add akash-joshi/agent-skills --list
+```
+
+Works with Claude Code, Cursor, Codex CLI, and Gemini CLI.
+
+### Clone and Copy
 
 ```bash
 git clone https://github.com/akash-joshi/agent-skills.git
 cp -r agent-skills/cold-outreach-skills/skills/* .agents/skills/
 ```
 
-### Option 2: Git Submodule
+### Git Submodule
 
 ```bash
 git submodule add https://github.com/akash-joshi/agent-skills.git .agents/cold-outreach
 ```
 
-### Option 3: Cherry-pick Individual Skills
+### Cherry-pick Individual Skills
 
 ```bash
 # Just copy the skills you need
