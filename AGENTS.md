@@ -96,6 +96,41 @@ When entering plan mode for implementation tasks:
 - YOU MUST MATCH the style and formatting of surrounding code, even if it differs from standard style guides. Consistency within a file trumps external standards.
 - YOU MUST NOT manually change whitespace that does not affect execution or output. Otherwise, use a formatting tool.
 
+## Tiger-Style Coding (safety > performance > developer experience)
+
+Adapted from [TigerBeetle's TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/TIGER_STYLE.md). Full rationale lives in the `tiger-style-coding` skill.
+
+Priority order: **safety > performance > developer experience.** Simplicity is how you get all three at once.
+
+1. **70-line function hard cap.** If a function doesn't fit on one screen, split it. Push `if`s up (parent function owns branching), push `for`s down (helpers do pure work). Reference: [push ifs up and fors down](https://matklad.github.io/2023/11/15/push-ifs-up-and-fors-down.html).
+2. **Two runtime assertions minimum per non-trivial function.** Pre-conditions on args, post-conditions on returns. Assert positive space (what you expect) AND negative space (what you don't). Split compound: `assert(a); assert(b);` beats `assert(a && b);`. Type systems are compile-time only; runtime invariants catch drift.
+3. **Assertions ≠ error handling.** Assertion failures = programmer errors → crash. User/operational errors → handled explicitly. Assertions downgrade catastrophic correctness bugs (silent data corruption) into liveness bugs (crash + restart).
+4. **Bound every loop, queue, retry, recursion depth, batch size.** Explicit upper limit. No naked `while (hasMore)`. Where a loop legitimately cannot terminate (event loop), assert that fact explicitly.
+5. **Simpler return types win.** `void > bool > T > T | null > Result<T, E>`. Every layer of optionality is a branch every caller must handle. Prefer throwing at boundaries and returning plain `T` internally.
+6. **Explicit options at every library call site.** Never rely on library defaults — they change in minor versions. Pass `signal`, `timeout`, `redirect`, etc. explicitly on every `fetch()`; pass `options` explicitly on every DB call.
+7. **Naming: qualifiers last, descending significance.** `latency_ms_max` reads better than `maxLatencyMs` and groups related variables alphabetically. Use symmetric pairs (`source`/`target`, not `src`/`dest`) so derived names (`source_offset`/`target_offset`) line up. Prefer nouns over adjectives (`replica.pipeline` beats `replica.preparing`). Include units in names (`latency_ms`, `payload_bytes`, `page_count`).
+8. **Say why.** Every commit message answers "why", not just "what". PR descriptions don't live in `git blame` — put the reasoning in the commit body. Comments are prose (capital letter, full stop). Comments explain rationale; code shows mechanism.
+9. **Zero-dependency bias.** Every new dependency = supply-chain surface + maintenance tax + cold-start cost (especially on edge runtimes). Ask "can I write 30 lines instead" before adding a dep. Foundational infra amplifies dep cost through everything downstream. New deps require justification in the PR body.
+10. **Zero technical debt.** Fix design flaws mid-implementation, not later. "Clean it up later" costs 10-100x if it happens at all. Don't ship known bugs and file tickets.
+11. **Batch, don't react.** When code interacts with external systems (webhooks, queues, cron triggers), run at your own pace and batch external events. Cheaper (fewer transactions, better cache locality), safer (bounded work per period), simpler (control flow stays yours).
+12. **Back-of-envelope before code.** Four resources (network, disk, memory, CPU) × two dimensions (bandwidth, latency). Sketch the numbers before implementing. Land within 90% of the global optimum.
+13. **Split compound conditions into nested if/else.** Compound booleans hide cases. For every `if`, ask whether the matching `else` needs handling or asserting.
+14. **State invariants positively.** `if (index < length)` matches how humans read the constraint. Negations force double-reading.
+15. **Layout hygiene.** Line length ≤ 100 columns (two copies fit side-by-side). Braces on all `if` unless single-line (defends against "goto fail;" bugs). Order in files: top-down importance — `main` first, then types, then methods.
+16. **Cache invalidation / state hygiene.** Don't duplicate variables or take aliases. Declare at smallest scope. Calculate values close to their use — distance between check and use is where bugs live (POCPOU). Group allocation and cleanup with blank lines so leaks are visually obvious.
+17. **Off-by-one discipline.** Treat `index`, `count`, `size` as conceptually distinct types. `count = index + 1`; `size = count × unit`. Be explicit about division rounding (`Math.floor`, `Math.ceil`, or assert exactness).
+
+### Enforcement checklist
+
+When reviewing code (yours or an agent's), reject on any of:
+- Function exceeds 70 lines
+- Non-trivial function has fewer than 2 runtime assertions
+- Unbounded loop / retry / pagination
+- New dependency added without justification in PR body
+- Bare `fetch()` or library call with no explicit options
+- Commit message that only says "what" without "why"
+- Compound boolean conditions that hide cases
+
 ## Exception Handling
 
 - DO NOT add defensive try-catch blocks preemptively or "just in case"
