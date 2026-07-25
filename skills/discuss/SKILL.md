@@ -35,15 +35,9 @@ Restate what is being built in one clear sentence — the scope anchor. State it
 
 ### 2. Scout the codebase (lightweight)
 
-Extract 3-5 key terms from the description. Run `grep -rl` against the source tree to find relevant files. Read the 3-5 most relevant ones. The goal is a working sense of:
+Extract 3-5 key terms from the description. Run `grep -rl` against the source tree to find relevant files. Read the 3-5 most relevant ones, looking for reusable assets (components, hooks, helpers), established patterns (state, styling, data fetching, errors), and integration points (routes, providers, models).
 
-- **Reusable assets** — components, hooks, helpers that could be used.
-- **Established patterns** — how the codebase does state, styling, data fetching, errors.
-- **Integration points** — where new code would connect (routes, providers, models).
-
-Use this to annotate gray-area options later ("Cards reuses the existing Card component" vs "Timeline would need a new component").
-
-This is single-session context — do NOT write the scout results to a file.
+Use this to annotate gray-area options later ("Cards reuses the existing Card component" vs "Timeline would need a new component"). This is single-session context — do NOT write the scout results to a file.
 
 ### 3. Identify phase-specific gray areas
 
@@ -51,19 +45,13 @@ Generate 3-5 gray areas that are SPECIFIC to this work, not generic categories.
 
 **Bad (generic categories):** UI, UX, Behavior, Empty States.
 
-**Good (specific decisions):**
-
-- For a transaction display feature: drill-in vs inline expansion, info density per row, what happens when amounts are zero or pending, how to handle uncategorised transactions.
-- For an auth feature: session lifetime, multi-device policy, recovery flow, error response shape.
-- For a CLI: output format, flag design, progress reporting, error recovery.
+**Good (specific decisions):** for a transaction display feature — drill-in vs inline expansion, info density per row, what happens when amounts are zero or pending, how to handle uncategorised transactions.
 
 The test for a good gray area: would different answers produce noticeably different implementations? If no, it's not a gray area worth discussing.
 
 ### 4. State the gray areas and your defaults
 
-In a single plain-text message, list the 3-5 gray areas you've identified. For the ones where the answer is obvious enough to default (existing convention, codebase precedent, or a clear best practice), state your default inline so the user can override if they disagree. For the ones where the answer would meaningfully change the outcome, flag them as decision-worthy and ask in step 5.
-
-**Do NOT ask the user to multi-select which areas to discuss.** That's your call — the user invoked the skill to be driven, not to triage a menu of categories before they've seen the substance. Defaulting the obvious ones and asking only on the genuinely contested ones is the value the skill provides. The user can always redirect via free text if your defaults miss something.
+In a single plain-text message, list the 3-5 gray areas you've identified. Default the ones with an obvious answer (existing convention, codebase precedent, clear best practice) inline so the user can override. Flag the genuinely contested ones as decision-worthy and ask about those in step 5 — don't make the user triage a menu of categories before they've seen the substance.
 
 ### 5. Ask the decision-worthy questions
 
@@ -142,21 +130,16 @@ After writing, tell the user where the file is and suggest the next step:
 
 ## Philosophy
 
-The user knows: how they imagine it, what it should feel like, what's essential, specific references they have in mind.
-
-The user does NOT know (do not ask): codebase patterns (you read the code), technical risks (plan mode handles this), implementation approach (plan mode handles this), success metrics (inferred from the work).
+The user knows how they imagine it, what it should feel like, what's essential, and any specific references they have in mind. They don't know (and you shouldn't ask about) codebase patterns, technical risk, implementation approach, or success metrics — that's plan mode's job.
 
 ## Anti-patterns to avoid
 
-- **Generic gray areas.** "UI", "UX", "Behavior" are categories, not decisions. Generate specific ambiguities.
-- **Scope creep.** "Should we also add comments?" → defer it. The boundary is fixed at step 1.
 - **Asking what you should look up.** Codebase patterns, existing components, framework conventions — read the code, don't quiz the user.
 - **Implementation-level questions.** "Should we use useState or useReducer?" — that's plan mode's call. Ask about behaviour and outcomes, not internals.
 - **Acting on the discussion.** This skill produces a context file. It does NOT write code, run tests, or modify the project. End with the file path; let plan mode take over.
 - **Skipping the codebase scout.** Without code context, options become abstract and the user has nothing to anchor on.
-- **Asking the user to triage gray areas.** "Which of these areas would you like to discuss?" is friction-without-value — the user invoked the skill to be driven, not to pick from a menu of categories before they've seen the substance. State the areas, default the obvious ones inline, and ask only on the genuinely contested ones.
 - **Writing scaffold the user didn't ask for.** No phase numbers, no ROADMAP.md, no STATE.md. Just one CONTEXT file at the requested path.
 
 ## Output
 
-A single markdown file at the path the user chose (or the default). The file is consumable by plan mode, by future Claude sessions, or by humans reviewing the decisions before implementation begins.
+A single markdown file at the path the user chose (or the default) — consumable by plan mode, future sessions, or humans reviewing the decisions before implementation begins.

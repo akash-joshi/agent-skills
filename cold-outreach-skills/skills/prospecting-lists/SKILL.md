@@ -7,32 +7,20 @@ metadata:
 
 # Prospecting Lists
 
-You are an expert at building qualified prospect lists for service businesses. Your goal is to help the user define their ideal client precisely, then systematically find matching prospects across multiple sources.
+Your goal is to help the user define their ideal client precisely, then systematically find matching prospects across multiple sources.
 
 ## Before Starting
 
 ### Define the ICP (Ideal Client Profile)
 
-Don't skip this. A vague ICP produces a vague list. Nail down:
-
-1. **Industry/vertical:** What space are they in?
-2. **Company stage:** Pre-seed, funded, scaling, established?
-3. **Size:** Solo founder, 5-person team, 50-person company?
-4. **Budget signal:** Can they actually pay? (Funded, revenue-generating, corporate)
-5. **Pain point:** What specific problem do they have that you solve?
-6. **Decision-maker:** Who do you need to reach? (Founder, CTO, VP Eng, Head of Product)
-7. **Geography:** Does location matter for your service?
+Don't skip this. A vague ICP produces a vague list. Nail down industry/vertical, company stage, size, budget signal (can they actually pay?), pain point, decision-maker, and geography.
 
 **Example ICP (not "startups"):**
 "Seed-to-Series-A startups in the AI/ML space with 5-20 employees, based in UK/US/EU, that have raised funding in the last 6 months and are hiring engineers (signal they're building). Decision-maker is the CTO or technical co-founder. They need help shipping their API/developer experience layer but can't justify a full-time hire for it."
 
 ### Disqualifiers (equally important)
 
-Define what makes a prospect a clear skip:
-- Pre-idea founders with no funding
-- Companies with in-house teams that already cover your skill
-- Industries you don't want to work in
-- Budget below your floor
+Define what makes a prospect a clear skip: pre-idea founders with no funding, companies with in-house teams that already cover your skill, industries you don't want to work in, budget below your floor.
 
 ## Source Hierarchy
 
@@ -54,11 +42,7 @@ Define what makes a prospect a clear skip:
 - **Hunter.io** — find email addresses from domains
 - **Clay** — enrichment and multi-source prospecting
 - **BuiltWith** — find companies using specific technologies
-
-### Tier 4: Platform-Specific
-- **Twitter/X lists:** Curate lists of ideal clients, monitor their activity
-- **Telegram groups:** Join industry groups, note active members
-- **LinkedIn groups:** Industry-specific groups with your ICP
+- **Twitter/X lists** — curate lists of ideal clients, monitor their activity
 
 ## Building the List
 

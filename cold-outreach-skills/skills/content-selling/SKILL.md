@@ -20,37 +20,14 @@ You are an expert at using content to generate inbound client leads. Your goal i
 
 ## The Core Rule
 
-**Show, don't sell.** There is a massive difference between:
-- ❌ "Hire us for development" (selling)
-- ✅ Screen recording of a product you built (showing)
-- ❌ "We're the best AI consultancy" (selling)
-- ✅ "Here's how we built an MCP server that saved 40 hours/month" (showing)
-
-Your work cannot help anyone if nobody knows it exists. The best way to show people what you can do is to do it publicly.
+**Show, don't sell.** ❌ "Hire us for development" (selling) vs ✅ a screen recording of a product you built (showing). Your work cannot help anyone if nobody knows it exists — the best way to show people what you can do is to do it publicly.
 
 ## Content Types That Generate Clients
 
-### 1. Proof of Work (Highest Impact)
-- Screen recordings of things you built
-- Before/after case studies with numbers
-- Architecture diagrams of systems you designed
-- Open-source projects that demonstrate your skills
-- "Here's how we solved X for a client" posts
-
-### 2. Process Posts
-- "This is how I approach [common problem]"
-- "5 things I check before deploying [X]"
-- Step-by-step breakdowns of your methodology
-
-### 3. Build in Public
-- Share what you're building as you build it
-- Post progress updates, decisions, trade-offs
-- Share failures and lessons — authenticity > perfection
-
-### 4. Insight Posts
-- Observations from your niche that others haven't articulated
-- Contrarian takes backed by experience
-- Industry trends you're seeing from your client work
+1. **Proof of work (highest impact):** screen recordings of things you built, before/after case studies with numbers, architecture diagrams, open-source projects, "here's how we solved X for a client" posts
+2. **Process posts:** "This is how I approach [common problem]," step-by-step breakdowns of your methodology
+3. **Build in public:** progress updates, decisions, trade-offs, failures and lessons — authenticity beats perfection
+4. **Insight posts:** observations from your niche others haven't articulated, contrarian takes backed by experience
 
 ## Two Filters Before Every Post
 
@@ -61,40 +38,17 @@ If both answers are yes, post it. If not, rewrite.
 
 ## Platform Strategy
 
-### Twitter/X
-- Best for: engagement, visibility, product demos, threads
-- Engagement drives growth more than posting — comment on others' posts first
-- Short posts with images/screen recordings outperform text-only
-- No hashtags (they look desperate on X)
-
-### LinkedIn
-- Best for: B2B distribution, repurposing long-form content
-- Emojis as section markers work well
-- Personal stories + professional insights = highest engagement
-- Hashtags are acceptable and helpful on LinkedIn
-
-### Substack / Blog
-- Best for: home base for long-form, SEO, email list building
-- Repurpose articles as LinkedIn posts and X threads
-- Notes feature acts like a feed for engagement
+- **Twitter/X:** engagement and visibility for product demos and threads. Engagement drives growth more than posting — comment on others' posts first. No hashtags (they look desperate on X).
+- **LinkedIn:** B2B distribution, repurposing long-form content. Personal stories + professional insights get the highest engagement; hashtags are fine here.
+- **Substack/Blog:** home base for long-form, SEO, email list building. Repurpose articles into LinkedIn posts and X threads.
 
 ## Building Your Audience Intentionally
 
-1. Make a list of your ideal clients and industry leaders
-2. Follow them, engage with their content (likes, comments, retweets)
-3. Leave value-adding comments — not "🔥" or "Great post!" but real insights
-4. This trains the algorithm to show YOUR content to THEIR audience
-5. 15-20 thoughtful comments per day on others' posts
+Follow your ideal clients and industry leaders, then leave value-adding comments (real insights, not "🔥" or "Great post!") — 15-20 per day. This trains the algorithm to show your content to their audience.
 
 ## Your Existing Network is Untapped
 
-Channels you're probably ignoring:
-- WhatsApp status (10 seconds to share, reaches hundreds)
-- Instagram stories
-- Telegram status / channel
-- Group chats you're already in
-
-If you can cold-DM a stranger to pitch a £10K project, you can share a WhatsApp status with people who already know you.
+Channels you're probably ignoring: WhatsApp status, Instagram stories, Telegram status/channels, group chats you're already in. If you can cold-DM a stranger to pitch a £10K project, you can share a status update with people who already know you.
 
 ## Consistency Rules
 

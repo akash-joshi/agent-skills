@@ -42,11 +42,11 @@ Clarify gray areas in proposed work before planning. Surfaces implementation cho
 /discuss ABC-123 - should we use WebSockets or SSE for the streaming endpoint?
 ```
 
-Use before `/ticket` on any non-trivial feature where multiple reasonable implementations exist. Lightweight — no scaffolding required.
+Use before `/ticket` on any non-trivial feature where multiple reasonable implementations exist.
 
 ### 🐯 [Tiger-Style Coding](skills/tiger-style-coding/)
 
-Apply TigerBeetle's [TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/TIGER_STYLE.md) principles to any language and project. Enforces safety > performance > developer experience: 70-line function cap, runtime assertions with positive/negative space coverage, bounded loops and retries, explicit library options, zero-dependency bias, and back-of-envelope resource sketches before implementation.
+Apply TigerBeetle's [TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/TIGER_STYLE.md) principles to any language and project. Enforces safety > performance > developer experience: 70-line function cap, runtime assertions, bounded loops and retries, explicit library options, zero-dependency bias.
 
 Load when writing, reviewing, or refactoring code — or when configuring AI coding agents on how to write code for your codebase. Includes a review checklist that catches sprawl, unbounded work, and undocumented dependencies in agent-generated PRs.
 

@@ -7,16 +7,11 @@ metadata:
 
 # Keyword Search for Client Acquisition
 
-You are an expert at finding real-time client opportunities on social platforms using keyword search. Your goal is to help the user find people who are actively looking for their service right now — not in theory, not someday, but today.
+Your goal is to help the user find people who are actively looking for their service right now — not in theory, not someday, but today.
 
 ## Before Starting
 
-Understand the situation (ask if not provided):
-
-1. **What service do you sell?** — development, design, marketing, consulting, fractional CTO, etc.
-2. **Which platforms are you active on?** — Twitter/X, LinkedIn, Telegram, all three?
-3. **What's your niche?** — industry, company stage, geography, budget range
-4. **Do you have a portfolio link or case study to share?** — you'll need this for DMs
+Understand the situation (ask if not provided): what service they sell, which platforms they're active on (Twitter/X, LinkedIn, Telegram), their niche (industry, stage, geography, budget), and whether they have a portfolio link or case study ready for DMs.
 
 ## The Process
 
@@ -24,70 +19,36 @@ Understand the situation (ask if not provided):
 
 Think about how a potential client would describe their need in a post. Start specific, then broaden.
 
-**For development services:**
-- "looking for a developer," "hiring a developer," "need a dev team"
-- "looking for an agency," "need help building," "looking for a technical co-founder"
-- "can anyone recommend a developer," "does anyone know a good engineer"
+**By service type:**
+- Development: "looking for a developer," "hiring a developer," "need a dev team," "looking for a technical co-founder"
+- Consulting/fractional: "looking for a CTO," "fractional CTO," "need help with architecture"
+- Design: "hiring a designer," "need UI/UX help," "looking for a design agency"
 
-**For consulting/fractional:**
-- "looking for a CTO," "need technical advice," "fractional CTO"
-- "need help with architecture," "looking for an AI consultant"
-
-**For design:**
-- "hiring a designer," "need UI/UX help," "looking for a design agency"
-
-**Creative keyword patterns that find hidden opportunities:**
-- "can anyone recommend" + your skill
-- "does anyone know a good" + your role
+**Creative patterns that find hidden opportunities:**
+- "can anyone recommend" / "does anyone know a good" + your role
 - "we are looking for" + your service
 - "struggling with" + problem you solve
 - "just raised" / "just got funded" (companies that just raised need to build)
 
 ### Step 2: Search and Filter
 
-**On Twitter/X:**
-1. Go to Twitter search, type your keyword
-2. Filter by "Latest" — not "Top." You want fresh posts from the last few days
-3. Check 10-30 results daily
-
-**On LinkedIn:**
-1. Use the search bar with service-related keywords
-2. Filter by "Posts" and "Past week"
-3. Check company pages of recently funded startups
-
-**On Telegram:**
-1. Join industry-relevant groups
-2. Search within groups for keywords
-3. Watch for people asking for help or announcing projects
+| Platform | How |
+|----------|-----|
+| Twitter/X | Search your keyword, filter by "Latest" (not "Top") for fresh posts, check 10-30 results daily |
+| LinkedIn | Search bar with service-related keywords, filter by "Posts" + "Past week," check company pages of recently funded startups |
+| Telegram | Join industry-relevant groups, search within groups for keywords, watch for people asking for help or announcing projects |
 
 ### Step 3: Qualify Before You Engage
 
-Before doing anything with a result, check two things:
+Check recency (3+ months old = position probably filled) and legitimacy (followers, posting history, bio — especially in crypto/Web3, filter out scam accounts).
 
-1. **Is the post recent enough?** If someone posted 3+ months ago, the position is probably filled
-2. **Is the profile legit?** Check followers, posting history, bio. Especially in crypto/Web3, filter out scam accounts
+**Good signals:** real/funded company, clear budget signals (timeline, scope, budget mentioned), decision-maker posting (founder, CTO, VP Eng), active engagement.
 
-**Qualification signals (good):**
-- Real company or funded project
-- Clear budget signals (mentioning timeline, scope, or budget)
-- Decision-maker posting (founder, CTO, VP Eng)
-- Active engagement on their posts
-
-**Disqualification signals (skip):**
-- Vague "just an idea" posts with no budget
-- Accounts with no history or fake followers
-- Posts older than 2-3 weeks
-- Looking for co-founders offering only equity
+**Skip:** vague "just an idea" posts with no budget, no-history/fake-follower accounts, posts older than 2-3 weeks, co-founder asks offering only equity.
 
 ### Step 4: Warm Before You Pitch
 
-**Do NOT jump straight into DMs with a sales pitch.**
-
-1. Follow them first
-2. Leave a thoughtful comment on their post: "Hey, I might be able to help with this — sending you a DM"
-3. Keep the comment short, helpful, and position yourself as someone who can solve their problem
-
-Then move to the cold-dm skill for crafting the actual message.
+Don't jump straight into DMs with a sales pitch. Follow them first, then leave a short, helpful comment on their post ("Hey, I might be able to help with this — sending you a DM") before moving to cold-dm for the actual message.
 
 ## Daily Routine
 
@@ -102,14 +63,12 @@ Total: ~60 minutes/day. Do this consistently for 30 days before judging results.
 
 ## Automation (Only After Manual Mastery)
 
-Once you've done this manually for 2-4 weeks and understand what works:
+Once you've done this manually for 2-4 weeks and understand what works, automation amplifies it — don't automate before then, or you'll amplify garbage instead:
 
 - **Drippi** — automates X DM outreach at scale
 - **Inbox App** — multi-platform outreach automation
 - **TG Finder** (tgfinder.xyz) — finds Telegram handles of founders from domains
 - **Custom alerts** — set up Google Alerts or Twitter notifications for your keywords
-
-Never automate before you understand the process manually. Automation amplifies what works — if you don't know what works yet, you'll amplify garbage.
 
 ## Related Skills
 

@@ -29,7 +29,7 @@ Every effective cold DM follows this structure:
 3. **Relevant proof** — a link to similar work, a result, a case study
 4. **Low-friction question** — makes it easy to reply ("Would you be open to a quick call?" or "Worth exploring?")
 
-### Example (Twitter/X)
+### Example
 
 ```
 Hey [name], saw your post about needing a developer for [specific project].
@@ -39,42 +39,17 @@ We've built similar [type of product] before — here's an example: [portfolio l
 Would you be open to a quick chat this week?
 ```
 
-### Example (Telegram)
-
-```
-Hey [name], noticed [specific thing about their project/group message].
-
-I run [what you do] — we recently [specific result for similar client].
-
-Happy to share how we approached it if useful. Open to a quick call?
-```
-
-### Example (LinkedIn)
-
-```
-Hi [name], saw [specific post/announcement/hiring signal].
-
-I help [type of company] with [specific thing] — [one proof point].
-
-Would this be relevant for you right now?
-```
+The same formula adapts per platform: Telegram messages read more casual ("I run [what you do]..."), LinkedIn slightly more formal ("I help [type of company] with..."), but the structure — observation, what you do, proof, low-friction ask — stays the same.
 
 ## Writing Principles
 
-### Lead with their world, not yours
-The message should be about them and their problem. "You/your" dominates over "I/we." Don't open with who you are or what your company does.
+**Lead with their world, not yours.** "You/your" dominates over "I/we." Don't open with who you are or what your company does.
 
-### One paragraph, one ask
-Keep it under 5 sentences. One clear call-to-action. Make it easy to say yes with a one-line reply.
+**One paragraph, one ask.** Under 5 sentences, one clear call-to-action, easy to say yes with a one-line reply.
 
-### Personalisation must connect to the problem
-If you remove the personalised opening and the message still makes sense, the personalisation isn't working. The observation should lead naturally into why you're reaching out.
+**Personalisation must connect to the problem.** If you remove the personalised opening and the message still makes sense, the personalisation isn't working.
 
-### Reference something specific
-Mention their recent post, their product, their tech stack, their funding round. Generic messages get ignored. Specific messages get replies.
-
-### No five-paragraph essays about your company
-They don't care about your company yet. They care about their problem. Show you understand it.
+**Reference something specific.** Their recent post, product, tech stack, funding round. Generic messages get ignored.
 
 ## Platform-Specific Rules
 
@@ -110,8 +85,7 @@ From replies, aim to book 2-5 calls per week. From calls, close 1-2 deals per mo
 - Don't pitch in the first message — the goal is to start a conversation, not close a deal
 - Don't send identical messages to everyone — personalisation is the minimum bar
 - Don't give up after one message (see follow-up-sequences)
-- Don't write a five-paragraph essay about your company
-- Don't use "I hope this message finds you well" or any AI-sounding opener
+- Don't write a five-paragraph essay about your company, or use "I hope this message finds you well" or any AI-sounding opener
 - Don't ask for a 30-minute call in the first message — ask if it's "worth exploring"
 
 ## Related Skills

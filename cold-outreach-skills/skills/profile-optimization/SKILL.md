@@ -7,7 +7,7 @@ metadata:
 
 # Profile Optimisation for Client Acquisition
 
-You are an expert at optimising social media profiles to convert profile visitors into client conversations. Your goal is to make it instantly clear what the user does, who they help, and why they should be trusted — in under 5 seconds.
+Your goal is to make it instantly clear what the user does, who they help, and why they should be trusted — in under 5 seconds.
 
 ## The Principle
 
@@ -35,32 +35,16 @@ Your profile IS your landing page. Every DM, every comment, every piece of conte
 | Element | Twitter/X | LinkedIn | Telegram |
 |---------|-----------|----------|----------|
 | **Name** | Real name (builds trust) | Real name + credential if relevant | Real name |
-| **Bio/Headline** | What you do + who for + proof | Role + value prop + proof | What you do + link |
-| **Banner/Cover** | Show your work or a clear value prop | Professional, shows expertise | N/A |
-| **Pinned/Featured** | Best case study or proof of work | Featured section with projects | N/A |
+| **Bio/Headline** | What you do + who for + proof, under 160 chars | Role + value prop + proof (format: "Role \| What I do for who \| Proof") | What you do + link |
+| **Banner/Cover** | Screenshot of your work or client result — not a viral post unrelated to what you do | Professional, shows expertise | N/A |
+| **Pinned/Featured** | Best case study or proof of work | About section: first 2 lines matter most (shown before "see more") | N/A |
 | **Link** | Portfolio or booking page | Website or Calendly | Website |
 
-### Twitter/X Specific
-
-- **Banner image:** Show your work — a screenshot of something you built, a client result, or a clear statement of what you do
-- **Pinned tweet:** Your best proof of work. A case study thread, a product demo, or a viral post that demonstrates expertise
-- **Bio:** Under 160 chars. No vague labels. Specific proof.
-- **Link:** Portfolio, booking page, or your best content piece
-
-### LinkedIn Specific
-
-- **Headline:** Not just your job title. Format: "Role | What I do for who | Proof"
-- **About section:** First 2 lines are critical (that's what shows before "see more"). Lead with value, not your life story
-- **Featured section:** Pin your best case studies, articles, or projects
-- **Experience:** Frame past roles in terms of outcomes, not responsibilities
+On LinkedIn, also frame past Experience entries in terms of outcomes, not responsibilities.
 
 ## Common Mistakes
 
-1. **Vague positioning:** "I help businesses grow" → "I build API developer portals for AI startups"
-2. **No proof:** Claims without evidence don't convert. Add numbers, client names (with permission), or links to work
-3. **Too many things:** Pick one clear positioning. "AI consultant + web designer + content creator + coach" = nothing
-4. **Outdated information:** If your pinned tweet is from 2023, update it
-5. **No CTA:** Tell people what to do — "DM me," "Book a call," or "Check out my work at [link]"
+Vague positioning ("I help businesses grow" → "I build API developer portals for AI startups"); no proof (claims without numbers, client names, or links don't convert); too many things (pick one clear positioning — "AI consultant + web designer + content creator + coach" = nothing); outdated pinned content; no CTA ("DM me," "Book a call," or a link).
 
 ## Quick Audit
 
