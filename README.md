@@ -50,6 +50,16 @@ Apply TigerBeetle's [TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/
 
 Load when writing, reviewing, or refactoring code — or when configuring AI coding agents on how to write code for your codebase. Includes a review checklist that catches sprawl, unbounded work, and undocumented dependencies in agent-generated PRs.
 
+### 🎙️ [Voicenotes](skills/voicenotes-skill/)
+
+Connect AI agents to the [Voicenotes](https://voicenotes.com) API. Semantic search across notes, retrieve full transcripts, filter by tags or date range, and create text notes through natural conversation.
+
+```
+"pull my meeting notes from last Tuesday about the API redesign"
+```
+
+Requires a `VOICENOTES_API_KEY` - grab one from https://voicenotes.com/app?open-claw=true#settings.
+
 ### 📐 [AGENTS.md](./AGENTS.md)
 
 Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. Drop this at the root of your repo (or `~/AGENTS.md` for global rules) — it's the source of truth for how all agents in this repo behave.
