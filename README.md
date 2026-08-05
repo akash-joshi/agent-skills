@@ -60,6 +60,18 @@ Connect AI agents to the [Voicenotes](https://voicenotes.com) API. Semantic sear
 
 Requires a `VOICENOTES_API_KEY` - grab one from https://voicenotes.com/app?open-claw=true#settings.
 
+### 🎭 [Playwright CLI](skills/playwright-cli/)
+
+Drive a real browser from the command line with `playwright-cli`. Navigate, click, fill forms, and read accessibility snapshots that give the agent stable element refs instead of brittle selectors.
+
+```
+"log into the staging dashboard and check the settings page renders"
+```
+
+Nine reference guides cover the parts agents usually get wrong: reusing an authenticated session across runs, saving and loading storage state, mocking network requests, recording video and traces, and generating Playwright tests from a live session.
+
+Requires `npm install -g @playwright/cli`, and `ffmpeg` if you want video.
+
 ### 📐 [AGENTS.md](./AGENTS.md)
 
 Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. Drop this at the root of your repo (or `~/AGENTS.md` for global rules) — it's the source of truth for how all agents in this repo behave.
