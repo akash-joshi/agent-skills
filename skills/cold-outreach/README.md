@@ -59,13 +59,13 @@ See each skill's **Related Skills** section for the full dependency map.
 
 | Skill | Description |
 |-------|-------------|
-| [keyword-search](skills/keyword-search/) | Find people actively looking for your service right now using platform search on Twitter/X, LinkedIn, and Telegram. The fastest path to first clients. |
-| [cold-dm](skills/cold-dm/) | Write cold DMs on Twitter/X, LinkedIn, and Telegram that get replies. Message structure, personalisation, platform-specific formatting, and volume targets. |
-| [follow-up-sequences](skills/follow-up-sequences/) | Build multi-channel follow-up sequences that close deals. Most deals close on the 3rd-5th touch, not the first. |
-| [content-selling](skills/content-selling/) | Use content to attract inbound clients without direct selling. Show don't sell. The long-term compounding play to layer on top of outreach. |
-| [profile-optimization](skills/profile-optimization/) | Optimise your Twitter/X, LinkedIn, and Telegram profiles to convert visitors into clients. Your profile is your landing page. |
-| [prospecting-lists](skills/prospecting-lists/) | Build qualified prospect lists from directories, databases, and community research. ICP definition, source hierarchy, and list management. |
-| [discovery-calls](skills/discovery-calls/) | Run discovery calls that close deals. Call prep, the 4-phase framework (understand → prove → propose → close), pricing conversations, and follow-up. |
+| [keyword-search](keyword-search/) | Find people actively looking for your service right now using platform search on Twitter/X, LinkedIn, and Telegram. The fastest path to first clients. |
+| [cold-dm](cold-dm/) | Write cold DMs on Twitter/X, LinkedIn, and Telegram that get replies. Message structure, personalisation, platform-specific formatting, and volume targets. |
+| [follow-up-sequences](follow-up-sequences/) | Build multi-channel follow-up sequences that close deals. Most deals close on the 3rd-5th touch, not the first. |
+| [content-selling](content-selling/) | Use content to attract inbound clients without direct selling. Show don't sell. The long-term compounding play to layer on top of outreach. |
+| [profile-optimization](profile-optimization/) | Optimise your Twitter/X, LinkedIn, and Telegram profiles to convert visitors into clients. Your profile is your landing page. |
+| [prospecting-lists](prospecting-lists/) | Build qualified prospect lists from directories, databases, and community research. ICP definition, source hierarchy, and list management. |
+| [discovery-calls](discovery-calls/) | Run discovery calls that close deals. Call prep, the 4-phase framework (understand → prove → propose → close), pricing conversations, and follow-up. |
 
 ## Installation
 
@@ -88,7 +88,7 @@ Works with Claude Code, Cursor, Codex CLI, and Gemini CLI.
 
 ```bash
 git clone https://github.com/akash-joshi/agent-skills.git
-cp -r agent-skills/cold-outreach-skills/skills/* .agents/skills/
+cp -r agent-skills/skills/cold-outreach/*/ .agents/skills/
 ```
 
 ### Git Submodule
@@ -101,8 +101,8 @@ git submodule add https://github.com/akash-joshi/agent-skills.git .agents/cold-o
 
 ```bash
 # Just copy the skills you need
-cp -r agent-skills/cold-outreach-skills/skills/cold-dm .agents/skills/
-cp -r agent-skills/cold-outreach-skills/skills/keyword-search .agents/skills/
+cp -r agent-skills/skills/cold-outreach/cold-dm .agents/skills/
+cp -r agent-skills/skills/cold-outreach/keyword-search .agents/skills/
 ```
 
 ## Recommended Order

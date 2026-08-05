@@ -6,19 +6,19 @@ By [Akash Joshi](https://thewriting.dev).
 
 ## What's in here
 
-### 🎯 [Cold Outreach Skills](cold-outreach-skills/)
+### 🎯 [Cold Outreach Skills](skills/cold-outreach/)
 
 7 skills for client acquisition through cold outreach, social selling, and content-led growth. Built for solo consultants and freelancers.
 
 | Skill | Description |
 |-------|-------------|
-| [keyword-search](cold-outreach-skills/skills/keyword-search/) | Find people actively looking for your service on X/LinkedIn/Telegram |
-| [cold-dm](cold-outreach-skills/skills/cold-dm/) | Write outreach messages that get replies |
-| [follow-up-sequences](cold-outreach-skills/skills/follow-up-sequences/) | Multi-channel follow-up cadences (most deals close on touch 3-5) |
-| [content-selling](cold-outreach-skills/skills/content-selling/) | Inbound content strategy for client leads |
-| [profile-optimization](cold-outreach-skills/skills/profile-optimization/) | Convert profile visitors into clients |
-| [prospecting-lists](cold-outreach-skills/skills/prospecting-lists/) | ICP-based systematic list building |
-| [discovery-calls](cold-outreach-skills/skills/discovery-calls/) | Run calls that close deals |
+| [keyword-search](skills/cold-outreach/keyword-search/) | Find people actively looking for your service on X/LinkedIn/Telegram |
+| [cold-dm](skills/cold-outreach/cold-dm/) | Write outreach messages that get replies |
+| [follow-up-sequences](skills/cold-outreach/follow-up-sequences/) | Multi-channel follow-up cadences (most deals close on touch 3-5) |
+| [content-selling](skills/cold-outreach/content-selling/) | Inbound content strategy for client leads |
+| [profile-optimization](skills/cold-outreach/profile-optimization/) | Convert profile visitors into clients |
+| [prospecting-lists](skills/cold-outreach/prospecting-lists/) | ICP-based systematic list building |
+| [discovery-calls](skills/cold-outreach/discovery-calls/) | Run calls that close deals |
 
 ### 🎫 [Ticket Agent](agents/ticket.md)
 
@@ -100,7 +100,7 @@ Works with Claude Code, Cursor, Codex CLI, and Gemini CLI. Auto-detects your age
 git clone https://github.com/akash-joshi/agent-skills.git
 
 # Just cold outreach skills
-cp -r agent-skills/cold-outreach-skills/skills/* .agents/skills/
+cp -r agent-skills/skills/cold-outreach/*/ .agents/skills/
 
 # Ticket agent + engineering rules
 cp agent-skills/AGENTS.md ~/AGENTS.md
