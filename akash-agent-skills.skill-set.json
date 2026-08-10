@@ -1,0 +1,19 @@
+{
+  "$schema": "https://skill-set.md/schema/draft/skill-set.schema.json",
+  "name": "akash-agent-skills",
+  "version": "1.0.0",
+  "description": "Everything a solo developer's AI agent needs to write clean code, find clients, and capture ideas on the go.",
+  "skills": [
+    "akash-joshi/agent-skills@tiger-style-coding",
+    "akash-joshi/agent-skills@voicenotes",
+    "akash-joshi/agent-skills@playwright-cli",
+    "akash-joshi/agent-skills@discuss",
+    "akash-joshi/agent-skills@cold-dm",
+    "akash-joshi/agent-skills@content-selling",
+    "akash-joshi/agent-skills@discovery-calls",
+    "akash-joshi/agent-skills@follow-up-sequences",
+    "akash-joshi/agent-skills@keyword-search",
+    "akash-joshi/agent-skills@profile-optimization",
+    "akash-joshi/agent-skills@prospecting-lists"
+  ]
+}
