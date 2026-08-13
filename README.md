@@ -50,6 +50,14 @@ Apply TigerBeetle's [TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/
 
 Load when writing, reviewing, or refactoring code — or when configuring AI coding agents on how to write code for your codebase. Includes a review checklist that catches sprawl, unbounded work, and undocumented dependencies in agent-generated PRs.
 
+### 🧭 [Context Engineering](skills/context-engineering/)
+
+The new rules of context engineering for Claude 5 generation models, based on [Thariq's writeup](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models) after Anthropic cut ~80% of Claude Code's system prompt with no eval loss.
+
+Encodes the seven shifts (rules → judgement, examples → interface design, everything-upfront → progressive disclosure, and four more), an audit checklist for existing system prompts / CLAUDE.md / AGENTS.md / skills, and a meta-rule for how to encode a newly-discovered failure mode without bloating base context.
+
+Load when writing or auditing system prompts, CLAUDE.md, AGENTS.md, or skills; when a prompt or skill feels bloated; or when you're tempted to add "ALWAYS do X" / "NEVER do Y" rules.
+
 ### 🎙️ [Voicenotes](skills/voicenotes-skill/)
 
 Connect AI agents to the [Voicenotes](https://voicenotes.com) API. Semantic search across notes, retrieve full transcripts, filter by tags or date range, and create text notes through natural conversation.
