@@ -4,7 +4,7 @@ description: Grill the user relentlessly about a plan, decision, or idea. Use wh
 source: https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md
 ---
 
-**Canonical home:** this skill is mirrored to `~/dotfiles/claude/skills/productivity/grilling/` (as of 2026-07-25). After any update via `skill_manage`, sync both copies (`cp ~/.hermes/skills/productivity/grilling/SKILL.md ~/dotfiles/claude/skills/productivity/grilling/SKILL.md`), then `cd ~/dotfiles && git add claude/skills/productivity/grilling/ && git commit -m "grilling: <change>" && git pull --rebase && git push`. `skill_manage` only edits the Hermes copy — the dotfiles copy will drift if not manually mirrored. Hermes copy is source of truth if the two ever disagree.
+**Canonical home:** `akash-joshi/agent-skills` repo (`skills/grilling/SKILL.md`). After any update via `skill_manage`, sync the public copy too: clone to `/tmp`, apply the same patch, commit and push.
 
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 
@@ -24,7 +24,7 @@ Finding _facts_ is your job, never the user's. When a frontier question needs a 
 
 The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
-**Every grilling question is compact by default. Not "when user flags" — always.** ADHD-friendly principles (github.com/ayghri/i-have-adhd) are the DEFAULT format for grilling questions, especially on platforms with message-length limits (Discord, Telegram). Required shape:
+**Keep each question compact, especially on platforms with message-length limits (Discord, Telegram).**
 
 ```
 Q — <opinionated claim in one line>
@@ -46,6 +46,8 @@ Signal you've violated this: user responds with "what's the fucking question?", 
 **Never anchor a question on prior-session or file-based shorthand without checking it's still live.** If a question depends on a framing that came from an old interview review, a prep doc, or a decision log the user hasn't referenced in the current conversation (e.g. a "three-lane career filter" invented in a past session), state the framing plainly and explicitly flag its source before asking the user to react to it. Don't assume shared context persists just because it lives in a file. Ask "is this still how you think about X" as its own opening move, not baked silently into a bigger question.
 
 **Recognise when the user is asking for the verdict, not another round.** After a devil's-advocate pass (per section 3 below) has run once and the user pushes back with something like "isn't this what we're trying to resolve" or otherwise signals impatience with further questioning, that is the cue to actually deliver the recommendation — not to layer in yet another clarifying question. One devil's-advocate round per convergence is the ceiling; a second hedge after the user has explicitly asked for the call reads as avoidance, not rigour.
+
+
 
 ## Extended practice: multi-round, high-stakes decisions
 
@@ -216,6 +218,14 @@ Rule: when the grilling task is about content structure (article sections, doc l
 
 Signal you're in this failure mode: consecutive questions all ask about the shape/lead/spine/framing of a section without ever showing what the section will actually contain. If you can't quote a specific beat, sentence, or bullet the section will include, the user has no material to react to.
 
+**Title/heading tone matters — imperative-rigid framings will get rejected.** When grilling section titles for an article/deck/doc, the wording of the title itself carries a tone signal separate from the beats underneath. Imperative-absolute constructions ("Structure Every X the Same Way", "Always Do Y", "Never Z") read as rigid rule-book prescription — the user will push back with "same way is the wrong advice" or "every isn't what I mean" even when the underlying beats are correct. Principle-framed constructions ("Aim for Consistency in X", "Keep Y Coherent", "Ground Z in W") read as craft advice — same beats underneath, different tonal register.
+
+Real callout (2026-08-03, GTV 2026 article Section 4 title): proposed "Structure Every Evidence Document the Same Way" for a section whose beats were about consistent order/front-loading/criterion-mapping. User: *"'Same Way' is the wrong advice. Let's reword it to make just the title a bit softer."* Landed on "Aim for Consistency in Evidence Documents" — same beats, softer framing. User's explicit reason: *"Every doc being the same is not the point here."*
+
+**The test before proposing an imperative-absolute title:** does the section's actual meta-claim require rigid uniformity, or does it require consistency-within-variation? If the beats allow flex (each doc still fits its own material), the title should reflect that. Reserve imperative-absolute titles for truly-uniform rules (e.g. page limits, formatting caps that genuinely admit no variation).
+
+**Signal you've violated this:** the user reacts to the title specifically, separate from the beats — "the title is wrong", "reword the header", "that framing is off". The fix is usually not to rewrite the beats, but to soften the title while keeping the beats intact.
+
 ### 12. Every grilling question ships with a recommended, opinionated answer — never a bare menu
 
 Real failure, 2026-07-21 (consulting offer-v1.md ICP/pricing grilling): the agent asked "does this distinguish ICP #2 by (a) stage, (b) buyer psychology, (c) deliverable type, or (d) some combination — which parts specifically?" User's response: *"bro that's what we try to figure out based on grilling? You're just asking things directly here."* An open, unranked multiple-choice list is not a grilling question — it just hands the analytical work back to the user, the opposite of what grilling is for.
@@ -286,6 +296,22 @@ A distinct failure from anything above: resolving the *meta* questions around an
 ### 10. When the user says "that's what we grill for, don't just ask directly" — the fix is ONE opinionated question, not a menu
 
 Direct multi-part questions ("is it stage, or psychology, or format, or a combination — which parts?") get read as a form, not a grill, even when well-intentioned. The user wants a single concrete question paired with an actual recommended answer he can confirm or correct — see section 1's external-model routing pattern. If you catch yourself typing an open enumerated list of options with no opinion attached, stop and either form your own opinionated take or dispatch question-formation to an external model per section 1.
+
+### 14b. Check local source-of-truth files before reaching for external APIs
+
+Related to §14 (Voicenotes for "the recent call") but the mirror-image failure: reaching for the Voicenotes API when the material is already stored locally in Dropbox mentorship notes / decision logs / project folders. Skills prime you to use their tool — the voicenotes skill primes Voicenotes API calls, the airtable skill primes Airtable calls — and this bias can override the cheaper, more current local check.
+
+Real failure (2026-08-02, GTV 2026 article Section 3 grilling): user said *"I pulled more recordings from voicenotes to convert to advise... Pull it from the latest deets there? It's your job innit"* — I started constructing Voicenotes API calls (date-range recordings pull, semantic search). User cut in: *"You don't have to pull from voicenotes because it's all stored locally already?"* The 31 mentorship notes I actually needed were sitting in `Dropbox:Obsidian Notes/Topmate/Global Talent/*.md` — already converted from voicenotes to written advice, already indexed, already scannable by grep/search. Voicenotes API returned raw meeting transcripts which would have been the wrong shape anyway.
+
+**Rule:** before hitting an external API for content that could plausibly exist locally as processed/converted files, check the local paths first. For Akash specifically:
+- Mentorship advice / call outputs → `Dropbox:Obsidian Notes/Topmate/<topic>/*.md` (already converted from voicenotes)
+- Interview prep/reviews → `~/.cache/feedback-mirror/<Company>/` and `Dropbox:Obsidian Notes/Feedback/<Company>/`
+- Decision logs / grilling logs → `~/.hermes/memory/<topic>*.md`
+- Standing notes → `~/.hermes/memory/<topic>/README.md` as index
+
+**The test:** is the material likely to already exist as PROCESSED written notes (advice, reviews, decisions) rather than raw audio/transcripts? If yes, local check first. Voicenotes API is for RAW transcripts that haven't been converted yet, or for calls that happened AFTER the last conversion pass.
+
+**Signal you're about to violate this:** the user references "the recent stuff" / "the latest deets" and your first instinct is a Voicenotes API call. Ask yourself: does Akash typically convert these voicenotes to written notes stored locally? For mentorship sessions and interview reviews, yes. For calls that just happened in the last 24-48h, maybe not — that's the Voicenotes-first case.
 
 ### 15. Never launder your own paraphrase through an "independent" external model dispatch
 
@@ -373,6 +399,20 @@ Real failure (2026-07-22, values card sort): the file `~/.hermes/memory/values-c
 - A list of items read as exhaustive when the source doesn't claim completeness.
 
 **When correcting your own error same-session:** patch the source file to make the structure explicit, so the next session (or the next model in a dispatch loop) doesn't repeat the same misreading. In the values-card-sort case, the fix was to add an "Important: the numbers reflect the ORDER jotted, not a formal rank" preamble to the file itself.
+
+### 18b. Don't fabricate grounding — if you cite source files as evidence, you must have actually read them
+
+A specific failure mode of §18 (inventing structure in the user's data) applied to grounding lists rather than data structures: presenting a meta-claim to the user with a bulleted "grounding" section that names specific source files (rejection proformas, mentorship notes, decision logs), when you have not actually opened those files this session. The claim then gets rejected by the user because the pattern you invented doesn't match what they've actually observed — and it can't, because you built it from thin air with citation-shaped confidence added.
+
+Real failure (2026-08-02, GTV 2026 article Section 3 grilling): opened with a meta-claim that "reference letters get rejected when the writer's eminence isn't established first," with a grounding block citing rejection proformas Jan-Mar 2026 (Yulia, Kehinde, Prince, Radhika) and specific mentorship notes as evidence. I had not opened any of those rejection proformas that session; the "pattern" was manufactured. User's response: *"Well not really right - I've never really observed this being a big issue - wdyt?"* — a soft correction that would have been sharper if he'd noticed the fabricated grounding.
+
+**Rule:** before presenting a meta-claim with a grounding block that names specific source files, you must actually have read those files IN THE CURRENT SESSION (or verified you're recalling accurately from a same-session earlier turn). If you haven't opened them, either open them now with the appropriate tools, or state the claim without the fabricated citations and label it as your hypothesis rather than evidence-backed.
+
+**The test before writing a grounding bullet:** can you point to the tool call this session where you actually read the file you're citing? If no, don't cite it. It's fine to say "my hypothesis based on general pattern-matching from prior mentorship work is X, and I haven't verified this against the current rejection log — want me to check?" That's honest. Manufactured citations with fake specificity ("rejection proformas Jan-Mar 2026") are worse than no citations, because they signal a level of due diligence you didn't do.
+
+**Signal you're about to violate this:** you're writing a bullet like "Rejection proformas [dates] all had letters that led with X and buried Y" and you cannot recall the tool call this session where you actually read them. Stop. Either open them now, or rewrite the claim to remove the specific-file citation and label it as unverified.
+
+**Recovery when caught:** don't defend the claim, don't restate it with different words. Retract cleanly ("fair — I overreached, the rejection proforma references were shakier than I made them sound"), then ask an open question to get the user's actual observation before proposing a new meta-claim. This is what worked in the 2026-08-02 recovery: retract → ask "what DO you see as the thing that most often breaks letters?" → then actually go pull the source files before writing the next claim.
 
 ### 19. Verify shared session facts before building a reading on top of them
 
