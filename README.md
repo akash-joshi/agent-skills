@@ -20,6 +20,19 @@ By [Akash Joshi](https://thewriting.dev).
 | [prospecting-lists](skills/cold-outreach/prospecting-lists/) | ICP-based systematic list building |
 | [discovery-calls](skills/cold-outreach/discovery-calls/) | Run calls that close deals |
 
+### 💡 [Startup Idea Skills](skills/startup-ideas/)
+
+6 skills for finding bootstrapped startup ideas with real demand and shipping them, built on Charlie Ward's B.R.O.T.H. framework. For solo founders and indie hackers optimising for ~$10k MRR in 12 months.
+
+| Skill | Description |
+|-------|-------------|
+| [demand-first-validation](skills/startup-ideas/demand-first-validation/) | Demand-first mindset, the four failure modes, and the competitor reality check |
+| [founder-market-fit](skills/startup-ideas/founder-market-fit/) | Generate ideas from your own skills, scars, and network (Begin With Yourself) |
+| [trend-research](skills/startup-ideas/trend-research/) | Find demand with Google Trends, Ahrefs, Exploding Topics → a competitor list |
+| [idea-scoring](skills/startup-ideas/idea-scoring/) | Score and cull a shortlist down to one committed idea (Order & Cull) |
+| [market-entry-strategies](skills/startup-ideas/market-entry-strategies/) | The four ways to enter a proven market: downmarket, upmarket, repurpose, be early |
+| [ship-v1](skills/startup-ideas/ship-v1/) | Study competitors, build a simple v1 fast, interview users (Heat & Ship) |
+
 ### 🎫 [Ticket Agent](agents/ticket.md)
 
 A custom Claude Code agent that turns a ticket ID into a reviewable merge request, one TDD commit at a time.

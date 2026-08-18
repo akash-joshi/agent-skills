@@ -14,6 +14,12 @@
     "akash-joshi/agent-skills@follow-up-sequences",
     "akash-joshi/agent-skills@keyword-search",
     "akash-joshi/agent-skills@profile-optimization",
-    "akash-joshi/agent-skills@prospecting-lists"
+    "akash-joshi/agent-skills@prospecting-lists",
+    "akash-joshi/agent-skills@demand-first-validation",
+    "akash-joshi/agent-skills@founder-market-fit",
+    "akash-joshi/agent-skills@trend-research",
+    "akash-joshi/agent-skills@idea-scoring",
+    "akash-joshi/agent-skills@market-entry-strategies",
+    "akash-joshi/agent-skills@ship-v1"
   ]
 }
