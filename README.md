@@ -57,6 +57,10 @@ Clarify gray areas in proposed work before planning. Surfaces implementation cho
 
 Use before `/ticket` on any non-trivial feature where multiple reasonable implementations exist.
 
+### 📝 [Pull Request Descriptions](skills/pr-description/)
+
+Write pull request and merge request descriptions that lead with the human consequence, explain the conceptual change, and give reviewers trustworthy verification.
+
 ### 🐯 [Tiger-Style Coding](skills/tiger-style-coding/)
 
 Apply TigerBeetle's [TIGER_STYLE.md](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/TIGER_STYLE.md) principles to any language and project. Enforces safety > performance > developer experience: 70-line function cap, runtime assertions, bounded loops and retries, explicit library options, zero-dependency bias.
