@@ -71,6 +71,18 @@ Encodes the seven shifts (rules → judgement, examples → interface design, ev
 
 Load when writing or auditing system prompts, CLAUDE.md, AGENTS.md, or skills; when a prompt or skill feels bloated; or when you're tempted to add "ALWAYS do X" / "NEVER do Y" rules.
 
+### 📚 [LLM Wiki](skills/llm-wiki/)
+
+Build a persistent, compounding knowledge base as interlinked markdown files, based on [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). Unlike RAG (which rediscovers knowledge from scratch per query), the wiki compiles knowledge once and keeps it current - cross-references, contradiction flags, and synthesis are already there.
+
+```
+"ingest this article into my research wiki"
+"what does my wiki say about transformer inference?"
+"lint my wiki - find orphans and broken links"
+```
+
+Three layers (immutable raw sources, agent-owned wiki pages, a schema that constrains structure), with ingest/query/lint operations. Works as an Obsidian vault out of the box - wikilinks, graph view, Dataview - including headless sync for agents running on servers.
+
 ### 🎙️ [Voicenotes](skills/voicenotes-skill/)
 
 Connect AI agents to the [Voicenotes](https://voicenotes.com) API. Semantic search across notes, retrieve full transcripts, filter by tags or date range, and create text notes through natural conversation.
