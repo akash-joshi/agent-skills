@@ -89,6 +89,18 @@ No skill names, no slash commands, no reporting that a tool was unavailable or r
 
 Do not create a `## Review` section in the description summarizing what `/code-review`, `jimi-review`, or automated reviewers found. Review findings are incorporated directly into the commits before opening the PR. The reviewer cares about the final state of the code, not a diary of the author's iterations with review tools.
 
+### No process notes about hooks, pushes, or your machine
+
+The body records the change, not how it reached the remote. Never mention that a local hook was skipped (`--no-verify`, `HUSKY=0`), that a step "was not run locally", or which machine, container, or service could or could not run something. These are the author's environment, invisible and irrelevant to the reviewer.
+
+This is not the same as the tests-cannot-reach rule above. Naming a real coverage boundary and closing it by hand is honest and belongs in `## Verification`. "I could not run this on my box / it needs the Coder workspace / no API key here" is an environment excuse, and it belongs nowhere in the PR. If a skipped local hook has to be disclosed, that disclosure goes in the commit message — org policy accepts commit message or PR, so choose the commit message.
+
+**Rule:** if a sentence is about your tooling, your shell, your credentials, or a hook you skipped, it does not go in the description.
+
+### No attribution or tool signatures
+
+Never append "Generated with", "Co-authored-by a tool", or any assistant signature to the description or the commit message. The record is about the change, not what wrote it.
+
 ### Do not publish a specific you could not verify
 
 If a detail resisted checking, write only what is certainly true rather than the plausible version. "Neither `a` nor `b` gets the credit" is verifiable; naming the exact value that ends up stored, when the check kept failing, is a guess dressed as fact.
