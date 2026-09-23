@@ -47,6 +47,10 @@ Full writeup: [Hand Claude a Ticket, Get Back a Merge Request](https://thewritin
 
 **Prerequisites:** Project tracker MCP server (Jira, Linear, GitHub Issues, etc.), `glab` or `gh` CLI for merge requests, Figma MCP server (optional).
 
+### 📐 [Design Doc](skills/design-doc/)
+
+Write a design doc for a proposed change following a structured engineering format. Covers scoping, drafting, iteration, and publishing to Notion.
+
 ### 💬 [Discuss](skills/discuss/)
 
 Clarify gray areas in proposed work before planning. Surfaces implementation choices that would change the outcome, walks through them with concrete options, and produces a context file that plan mode or downstream agents can consume.
