@@ -113,6 +113,10 @@ Nine reference guides cover the parts agents usually get wrong: reusing an authe
 
 Requires `npm install -g @playwright/cli`, and `ffmpeg` if you want video.
 
+### 🖥️ [OpenCode Sessions](skills/opencode-sessions/)
+
+Drive local OpenCode sessions from the shell. List, create, rename, and delete sessions, launch plan-mode agents, pin runs to a specific model, and track parallel ticket agents.
+
 ### 📐 [AGENTS.md](./AGENTS.md)
 
 Engineering rules the agent follows. TDD enforcement, commit format, plan structure, code-style guidance. Drop this at the root of your repo (or `~/AGENTS.md` for global rules) — it's the source of truth for how all agents in this repo behave.
